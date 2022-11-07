@@ -26,4 +26,5 @@ jobs:
           dst_key: ${{ secrets.GITHUB_PRIVATE_KEY }}
           dst_token:  ${{ secrets.GITHUB_TOKEN }}
           static_list: "deepspark"
-
+          debug: true
+          clone_style: ssh
