@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Sync DeepSpark Gitee Repo to Github
+
+on:
+  schedule:
+    # daily run at UTC 0:00 (8am@Beijing) 
+    - cron:  '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mirror from gitee to github
+        uses: Yikun/hub-mirror-action@v1.2
+        with:
+          src: gitee/deep-spark
+          dst: github/Deep-Spark
+          dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
+          dst_token:  ${{ secrets.MIRROR_TOKEN }}
+          account_type: org
+          static_list: "deepsparkhub"
+          black_list: "deepspark"
+          debug: true
+          force_update: true
+          clone_style: ssh
