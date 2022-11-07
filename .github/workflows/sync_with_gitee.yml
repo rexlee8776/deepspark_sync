@@ -28,4 +28,5 @@ jobs:
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           static_list: "deepspark"
           debug: true
+          force_update: true
           clone_style: ssh
