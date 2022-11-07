@@ -23,8 +23,8 @@ jobs:
         with:
           src: gitee/majorli6
           dst: github/rexlee8776
-          dst_key: ${{ secrets.GITHUB_PRIVATE_KEY }}
-          dst_token:  ${{ secrets.GITHUB_TOKEN }}
+          dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
+          dst_token:  ${{ secrets.MIRROR_TOKEN }}
           static_list: "deepspark"
           debug: true
           clone_style: ssh
