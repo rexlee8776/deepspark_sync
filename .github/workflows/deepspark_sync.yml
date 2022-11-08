@@ -4,8 +4,8 @@ name: Sync DeepSpark Gitee Repo to Github
 
 on:
   schedule:
-    # daily run at UTC 0:00 (8am@Beijing) 
-    - cron:  '0 0 * * *'
+    # daily run at UTC 16:00 (0:00@Beijing Time) 
+    - cron:  '0 16 * * *'
   workflow_dispatch:
 
 jobs:
