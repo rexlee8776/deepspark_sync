@@ -20,8 +20,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "deepsparkhub"
-          black_list: "deepspark"
+          static_list: "deepsparkhub,deepspark"
           debug: true
           force_update: true
           clone_style: ssh
