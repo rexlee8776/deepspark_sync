@@ -5,12 +5,13 @@ name: Sync DeepSpark Gitee Repo to Github
 on:
   schedule:
     # daily run at UTC 16:00 (0:00@Beijing Time) 
-    - cron:  '0 4,16 * * *'
+    - cron:  '0 4-16/2 * * *'
   workflow_dispatch:
 
 jobs:
   Sync:
     runs-on: ubuntu-22.04
+    timeout-minutes: 60
     steps:
       - name: mirror from gitee to github
         uses: Yikun/hub-mirror-action@v1.3
