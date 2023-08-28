@@ -10,7 +10,7 @@ on:
 
 jobs:
   Sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: mirror from gitee to github
         uses: Yikun/hub-mirror-action@v1.3
