@@ -21,7 +21,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "deepsparkhub,deepspark,deepsparkinference"
+          static_list: "deepsparkhub,deepspark,deepsparkinference,ix-device-plugin,ix-exporter"
           debug: true
           force_update: true
           clone_style: https
