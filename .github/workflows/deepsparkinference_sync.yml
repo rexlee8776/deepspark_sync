@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Sync DeepSpark Gitee Repo to Github
+name: Sync DeepSparkInference Gitee Repo to Github
 
 on:
   schedule:
     # daily run at UTC 16:00 (0:00@Beijing Time) 
-    - cron:  '0 15,16 * * *'
+    - cron:  '0 15-18 * * *'
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "deepsparkhub,deepspark"
+          static_list: "deepsparkinference"
           debug: true
           force_update: true
           clone_style: https
