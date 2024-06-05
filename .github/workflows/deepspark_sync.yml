@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Sync DeepSpark, DeepSparkHub
+name: Sync DeepSpark
 
 on:
   schedule:
     # daily run at UTC 16:00 (0:00@Beijing Time) 
-    - cron:  '0 15-17 * * *'
+    - cron:  '0 16 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "deepsparkhub,deepspark"
+          static_list: "deepspark"
           debug: true
           force_update: true
           clone_style: https
