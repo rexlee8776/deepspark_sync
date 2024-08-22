@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Sync IxRT-OSS
+
+on:
+  schedule:
+    # daily run at UTC 16:00 (0:00@Beijing Time) 
+    - cron:  '0 16 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  Sync:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: mirror from gitee to github
+        uses: Yikun/hub-mirror-action@v1.4
+        with:
+          src: gitee/deep-spark
+          dst: github/Deep-Spark
+          dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
+          dst_token:  ${{ secrets.MIRROR_TOKEN }}
+          account_type: org
+          static_list: "IxRT-OSS"
+          debug: true
+          force_update: true
+          clone_style: https
