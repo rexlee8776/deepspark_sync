@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Sync IxRT-OSS
+name: Sync iluvatar-corex-ixrt
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "IxRT-OSS"
+          static_list: "iluvatar-corex-ixrt"
           debug: true
           force_update: true
           clone_style: https
