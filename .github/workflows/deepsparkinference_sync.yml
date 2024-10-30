@@ -5,7 +5,7 @@ name: Sync DeepSparkInference
 on:
   schedule:
     # daily run at UTC 16:00 (0:00@Beijing Time) 
-    - cron:  '0 14-21 * * 1-6'
+    - cron:  '0 14-22 * * 1-6'
   workflow_dispatch:
 
 jobs:
