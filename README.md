@@ -1,14 +1,16 @@
 ---
-language:
-  - en
+language: en
 pipeline_tag: xx
 tags:
   - xx
+  - yy
+  - zz
 license: other
 hardwares:
   - xx
-frameworks:
-  - xx
+  - yy
+  - zz
+frameworks: xx
 library_name: xx
 ---
 
