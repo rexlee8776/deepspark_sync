@@ -21,7 +21,7 @@ jobs:
           dst_key: ${{ secrets.MIRROR_PRIVATE_KEY }}
           dst_token:  ${{ secrets.MIRROR_TOKEN }}
           account_type: org
-          static_list: "iluvatar-corex-ixrt,go-ixdcgm,go-ixml,ix-container-toolkit,ix-gpu-operator,ix-device-plugin,ix-exporter,ix-feature-discovery,ixjpeg-python"
+          static_list: "iluvatar-corex-ixrt,go-ixdcgm,go-ixml,ix-container-toolkit,ix-gpu-operator,ix-device-plugin,ix-exporter,ix-feature-discovery,ixjpeg-python,ix-volcano-plugin,tis-igie-backend,tis-ixrt-backend"
           debug: true
           force_update: true
           clone_style: https
