@@ -1,0 +1,26 @@
+name: Clone DeepSparkInference
+on:
+  schedule:
+    # daily run at UTC 16:00 (0:00@Beijing Time) 
+    - cron:  '1'
+  workflow_dispatch:
+
+jobs:
+  Sync:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: Clone deepsparkinference
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          depth: 1
+          branch: 'master'
+          owner: 'deep-spark'
+          repository: 'deepsparkinference'
+      - name: Clone deepspark
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          depth: 1
+          branch: 'master'
+          owner: 'deep-spark'
+          repository: 'deepspark'
