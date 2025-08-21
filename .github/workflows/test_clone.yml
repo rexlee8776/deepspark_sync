@@ -1,10 +1,7 @@
 name: Clone DeepSparkInference
 on:
   schedule:
-    # daily run at UTC 16:00 (0:00@Beijing Time) 
-    - cron:  '1'
-  workflow_dispatch:
-
+    - cron:  '0 18 * * 1-6'
 jobs:
   Sync:
     runs-on: ubuntu-22.04
